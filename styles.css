@@ -33,6 +33,10 @@
     color: #dd4c37; 
     font-weight: bold;  
 }
+#menu-button:hover{
+    background:#dd4c37 ;
+    color: #CAD6F1;
+} 
 #navbarNav{
     margin-right: 100px;
 }
