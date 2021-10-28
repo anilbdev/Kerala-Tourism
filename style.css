@@ -1,28 +1,33 @@
-#background{
-    background-image:linear-gradient(rgba(206, 205, 205, 0.4),rgba(233, 50, 50, 0.4)),url('./images/bg.jpg');
+#background {
+    background-image: linear-gradient(rgba(206, 205, 205, 0.4), rgba(233, 50, 50, 0.4)), url('./images/bg.jpg');
     background-attachment: fixed;
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#logo-container{
-    
-width: 100px;
-height: 100px;
-background-image: url('./images/logo.jpg');
-background-size: cover;
-border-radius: 20px;
 
-/* left: 138px;
-top: 82px; */
-
-/* Basic Color/Stroke */
-
-
-
+#logo-container {
+    width: 100px;
+    height: 100px;
+    background-image: url('./images/logo.jpg');
+    background-size: cover;
+    border-radius: 20px;
 }
-#logo-image{
+
+#logo-image {
     width: 100%;
     height: 100%;
+}
+
+#menu-button {
+    width: 225px;
+    height: 71px;
+    /* Basic Color/Accent */
+    background: #F44E77;
+    border-radius: 20px;
+    /* text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
