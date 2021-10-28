@@ -50,6 +50,9 @@
     background-color: #4d3d3d;
     opacity: .5;
     color:#ffffff ;
+    display: inline-block;
+    margin-top: 5px;
+    
         
 }#descr span{
     
@@ -57,7 +60,24 @@
     font-size: medium;    
     background-color: #4d3d3d;
     opacity: .5;
-    color:#ffffff ;        
-}#descr{
+    color:#ffffff ; 
+    display: inline-block;
+    margin-top: 5px;
     
+          
 }
+#btn-submit{
+    display: inline-block;   
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: 150px;
+    border: 1px solid #dd4c37;
+    background-color: #CAD6F1;
+    
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
+}#btn-submit:hover{
+    background-color: #dd4c37;
+    border-radius: 150px;
+    color: white;
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
