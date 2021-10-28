@@ -40,10 +40,10 @@
 #navbarNav{
     margin-right: 100px;
 }#title{
-    margin-top: 20px;
+    margin-top: 10px;
     
 }#title span{
-    padding: 5px;
+    
     border-radius: 10px;
     font-size: large;
     font-weight: bold;
@@ -52,13 +52,12 @@
     color:#ffffff ;
         
 }#descr span{
-    padding: 5px;
+    
     border-radius: 10px;
-    font-size: large;
-    font-weight: bold;
+    font-size: medium;    
     background-color: #4d3d3d;
     opacity: .5;
     color:#ffffff ;        
 }#descr{
-    margin-top: 20px;
+    
 }
