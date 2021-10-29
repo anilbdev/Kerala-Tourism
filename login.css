@@ -31,36 +31,21 @@
     justify-content: center;
     align-items: center;
     color: #dd4c37; 
-    font-weight: bold;  
+    font-weight: bold; 
+    border: 2px solid #dd4c37;
+    transition: background-color 0.2s,color 0.2s; 
+    
+}
+#header-nav li a{
+    text-decoration: none;
 }
 #menu-button:hover{
     background:#dd4c37 ;
     color: #CAD6F1;
+    transition: background-color 0.2s,color 0.2s;
 } 
 #navbarNav{
     margin-right: 100px;
-}
-#login-conatiner{
-    
-    
-}
-          
-
-#btn-submit{
-    display: inline-block;   
-    padding: 10px 30px;
-    text-decoration: none;
-    font-weight: 300;
-    border-radius: 150px;
-    border: 1px solid #dd4c37;
-    background-color: #CAD6F1;
-    
-    transition: background-color 0.2s,border 0.2s,color 0.2s;
-}#btn-submit:hover{
-    background-color: #dd4c37;
-    border-radius: 150px;
-    color: white;
-    transition: background-color 0.2s,border 0.2s,color 0.2s;
 }
 li{
     display: inline;
