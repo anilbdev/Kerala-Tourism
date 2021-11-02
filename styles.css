@@ -8,7 +8,7 @@
     top: 0;   
 }
 html { 
-    fle
+    
     height:100% }
 
 #logo-container {
@@ -39,9 +39,7 @@ html {
     border: 2px solid #dd4c37;
     transition: background-color 0.2s,color 0.2s; 
 }
-footer{
-    margin-top: 100px;
-}
+
 #menu-button:hover{
     background:#dd4c37 ;
     color: #CAD6F1;
@@ -87,6 +85,11 @@ footer{
     border-radius: 20px;
 }li{
     display: inline;
+}
+/* footer */
+
+#social-media-links a i:hover{
+color: #dd4c37;
 }
 
 
