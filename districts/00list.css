@@ -96,3 +96,7 @@ li{
     text-align: center;
     justify-content: center;
   } */
+  .distName{
+   font-size: 10px;
+   font-weight: bold;
+  }
