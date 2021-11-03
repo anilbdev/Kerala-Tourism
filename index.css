@@ -1,9 +1,12 @@
+/* main-body */
+#main-body{
+    border: 1px transparent solid;
+}
 /* style-card */
 .container .row .col-lg-4 {
     display: flex;
     justify-content: center
 }
-
 .card {
     position: relative;
     padding: 0;
@@ -16,18 +19,15 @@
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
 }
-
 .card .card-image {
     width: 100%;
     max-height: 340px
 }
-
 .card .card-image img {
     width: 100%;
     max-height: 340px;
     object-fit: cover
 }
-
 .card .card-content {
     position: absolute;
     bottom: -180px;
@@ -40,17 +40,14 @@
     box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.2)
 }
-
 .card:hover .card-content {
     bottom: 0px
 }
-
 .card:hover .card-content h4,
 .card:hover .card-content h5 {
     transform: translateY(10px);
     opacity: 1
 }
-
 .card .card-content h4,
 .card .card-content h5 {
     font-size: 1.1rem;
@@ -63,54 +60,43 @@
     transform: translateY(-40px);
     transition-delay: 0.2s
 }
-
 .card .card-content h5 {
     transition: 0.5s;
     font-weight: 200;
     font-size: 0.8rem;
     letter-spacing: 2px
 }
-
 .card .card-content .social-icons {
     list-style: none;
     padding: 0
 }
-
 .card .card-content .social-icons li {
     margin: 10px;
     transition: 0.5s;
     transition-delay: calc(0.15s * var(--i));
     transform: translateY(50px)
 }
-
 .card:hover .card-content .social-icons li {
     transform: translateY(20px)
 }
-
 .card .card-content .social-icons li a {
     color: #fff
 }
-
 .card .card-content .social-icons li a span {
     font-size: 1.3rem
 }
-
 @media(max-width: 991.5px) {
     .container {
         margin-top: 20px
     }
-
     .container .row .col-lg-4 {
         margin: 20px 0px
     }
 }
-
 /* Hero text */
 #title{
     margin-top: 10px;
-    
 }#title span{
-    
     border-radius: 10px;
     font-size: large;
     font-weight: bold;
@@ -119,10 +105,7 @@
     color:#ffffff ;
     display: inline-block;
     margin-top: 5px;
-    
-        
 }#descr span{
-    
     border-radius: 10px;
     font-size: medium;    
     background-color: #4d3d3d;
@@ -130,6 +113,4 @@
     color:#ffffff ; 
     display: inline-block;
     margin-top: 5px;
-    
-          
 }
