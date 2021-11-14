@@ -60,8 +60,15 @@ window.onload = function () {
         //password check//
         if (passwordValue === '') {
             setErrorFor(password, 'Password cannot be blank');
-        } else {
-            setSuccessFor(password);
+        }else if (isStrongPassword(passwordValue)) {
+            
+           passwordStrengthStrong(password, 'Strong password')
+        }else if (isWeakPassword(passwordValue)) {
+            
+            passwordStrengthWeak(password, 'Weak password')
+         }
+         else {
+            setErrorFor(password, 'Password must contain atleast one  lowercase, one upper case letters and a number');
         }
     }
 
@@ -78,6 +85,22 @@ window.onload = function () {
         formControl.className = 'myForm-controlSuccess';
 
     }
+    // password strength//
+    function passwordStrengthStrong(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'myForm-controlPassStrength';
+        small.innerText = message;
+
+    }
+    function passwordStrengthWeak(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'myForm-controlPassStrengthWeak';
+        small.innerText = message;
+
+    }
+
     function isEmail(email) {
         console.log('is email ')
         let RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -87,6 +110,15 @@ window.onload = function () {
         let phoneRegExp=  /^\d{3}[\s.-]?\d{3}[\s.-]?\d{4}$/
         return phoneRegExp.test(phone)
     }
+    function isStrongPassword(phone){
+        let phoneRegExp=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/
+        return phoneRegExp.test(phone)
+    }
+    function isWeakPassword(phone){
+        let phoneRegExp=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/
+        return phoneRegExp.test(phone)
+    }
+
 
 }
 

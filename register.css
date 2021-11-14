@@ -31,5 +31,17 @@
    
  
 }
+.myForm-controlPassStrength small {
+	visibility: visible;
+    color: green;
+ 
+}
+.myForm-controlPassStrengthWeak small {
+	visibility: visible;
+    color: rgb(197, 110, 10);
+ 
+}
+
+
 
 /* Carousal */
