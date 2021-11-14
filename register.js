@@ -60,7 +60,10 @@ window.onload = function () {
         //password check//
         if (passwordValue === '') {
             setErrorFor(password, 'Password cannot be blank');
-        }else if (isStrongPassword(passwordValue)) {
+        }else if(passwordValue.length <8){
+            setErrorFor(password, 'Password must contain minimum 8 elements');
+        }
+        else if (isStrongPassword(passwordValue)) {
             
            passwordStrengthStrong(password, 'Strong password')
         }else if (isWeakPassword(passwordValue)) {
