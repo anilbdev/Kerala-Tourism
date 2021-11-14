@@ -35,9 +35,9 @@ window.onload = function () {
         //phone number//
         if (phoneValue === '') {
             setErrorFor(phone, 'Phone Number cannot be blank')
-        } 
-        else if(!isValidPhone(phoneValue)){
-            console.log('isphonenumenr fin?? ',isValidPhone(phoneValue) )
+        }
+        else if (!isValidPhone(phoneValue)) {
+            console.log('isphonenumenr fin?? ', isValidPhone(phoneValue))
             setErrorFor(phone, 'Not a valid Phone number')
         }
         else {
@@ -49,7 +49,7 @@ window.onload = function () {
             setErrorFor(email, 'email cannot be blank')
             console.log("2 if")
         } else if (!isEmail(emailValue)) {
-            
+
             setErrorFor(email, 'Not a valid email')
         }
         else {
@@ -60,17 +60,17 @@ window.onload = function () {
         //password check//
         if (passwordValue === '') {
             setErrorFor(password, 'Password cannot be blank');
-        }else if(passwordValue.length <8){
+        } else if (passwordValue.length < 8) {
             setErrorFor(password, 'Password must contain minimum 8 elements');
         }
         else if (isStrongPassword(passwordValue)) {
-            
-           passwordStrengthStrong(password, 'Strong password')
-        }else if (isWeakPassword(passwordValue)) {
-            
+
+            passwordStrengthStrong(password, 'Strong password')
+        } else if (isWeakPassword(passwordValue)) {
+
             passwordStrengthWeak(password, 'Weak password')
-         }
-         else {
+        }
+        else {
             setErrorFor(password, 'Password must contain atleast one  lowercase, one upper case letters and a number');
         }
     }
@@ -92,7 +92,7 @@ window.onload = function () {
     function passwordStrengthStrong(input, message) {
         const formControl = input.parentElement;
         const small = formControl.querySelector('small');
-        formControl.className = 'myForm-controlPassStrength';
+        formControl.className = 'myForm-controlPassStrengthStrong';
         small.innerText = message;
 
     }
@@ -109,20 +109,20 @@ window.onload = function () {
         let RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         return RegExp.test(email);
     }
-    function isValidPhone(phone){
-        let phoneRegExp=  /^\d{3}[\s.-]?\d{3}[\s.-]?\d{4}$/
+    function isValidPhone(phone) {
+        let phoneRegExp = /^\d{3}[\s.-]?\d{3}[\s.-]?\d{4}$/
         return phoneRegExp.test(phone)
     }
-    function isStrongPassword(phone){
-        let phoneRegExp=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/
+    function isStrongPassword(phone) {
+        let phoneRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/
         return phoneRegExp.test(phone)
     }
-    function isWeakPassword(phone){
-        let phoneRegExp=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/
+    function isWeakPassword(phone) {
+        let phoneRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/
         return phoneRegExp.test(phone)
     }
 
 
 }
 
-   
+
