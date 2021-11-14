@@ -1,1 +1,35 @@
+.myForm-control input{
+    position: relative;
+}
+.myForm-controlSuccess input {
+	border-color: #2ecc71;
+    border-width: 3px;
+    
+}
+
+.myForm-controlError input {
+	border-color: #e74c3c;
+    border-width: 3px;
+    
+}
+
+
+.myForm-control small{
+    position: absolute;
+    left:35%;
+    font-size: x-small;
+    visibility: hidden;
+}
+.myForm-controlError small {
+	visibility: visible;
+    color: red;
+ 
+}
+
+.myForm-controlSuccess small {
+	visibility: hidden;
+   
+ 
+}
+
 /* Carousal */
