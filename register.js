@@ -66,12 +66,16 @@ window.onload = function () {
         else if (isStrongPassword(passwordValue)) {
 
             passwordStrengthStrong(password, 'Strong password')
-        } else if (isWeakPassword(passwordValue)) {
+        } else if (isMediumPassword(passwordValue)) {
 
-            passwordStrengthWeak(password, 'Weak password')
+            passwordStrengthMedium(password, 'Must containt atleat one letter and special character')
+        }
+        else if (isWeakPassword(passwordValue)) {
+
+            passwordStrengthWeak(password, 'Weak')
         }
         else {
-            setErrorFor(password, 'Password must contain atleast one  lowercase, one upper case letters and a number');
+            setErrorFor(password, 'Must contain atleast one  lowercase, one upper case  and a number');
         }
     }
 
@@ -96,6 +100,13 @@ window.onload = function () {
         small.innerText = message;
 
     }
+    function passwordStrengthMedium(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'myForm-controlPassStrengthMedium';
+        small.innerText = message;
+
+    }
     function passwordStrengthWeak(input, message) {
         const formControl = input.parentElement;
         const small = formControl.querySelector('small');
@@ -117,8 +128,12 @@ window.onload = function () {
         let phoneRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/
         return phoneRegExp.test(phone)
     }
-    function isWeakPassword(phone) {
+    function isMediumPassword(phone) {
         let phoneRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/
+        return phoneRegExp.test(phone)
+    }
+    function isWeakPassword(phone) {
+        let phoneRegExp = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/
         return phoneRegExp.test(phone)
     }
 
